@@ -1,0 +1,130 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+textarea,
+input:not([type='submit']) {
+  height: 50px;
+  padding: 10px;
+  width: 250px;
+  position: relative;
+}
+
+textarea {
+  padding-top: 16px;
+  resize: none;
+  height: 250px;
+}
+
+input,
+textarea {
+  border-radius: 20px;
+  border: #888 1px solid;
+  box-sizing: border-box;
+  justify-self: center;
+  background-color: var(--background-color);
+  color: var(--form-text-color);
+}
+
+::placeholder {
+  color: transparent; /* Hide placeholder text */
+}
+
+input[type='submit'] {
+  background-color: var(--btn-color);
+  color: var(--btn-text-color);
+  border: none;
+  border-radius: 20px;
+  width: 126px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+  margin: auto;
+}
+
+input[type='submit']:hover {
+  transform: scale(1.05);
+}
+
+input[type='submit']:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+@media (width >= 800px) {
+  textarea,
+  input:not([type='submit']) {
+    width: 600px;
+    font-size: 20px;
+  }
+  form {
+    gap: 40px;
+  }
+}
+
+@media (width >= 1400px) {
+  textarea,
+  input:not([type='submit']) {
+    width: 800px;
+  }
+}
+
+.formGroup {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.formGroup input,
+.formGroup textarea {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  padding-left: 16px; 
+}
+
+/* Style for span inside input and textarea */
+.formGroup span {
+  position: absolute;
+  left: 16px;
+  top: 50%; 
+  transform: translateY(-50%); 
+  pointer-events: none;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.2em; /* Increased font size */
+  color: var(--text-color);
+  text-transform: uppercase;
+  transition: 0.5s;
+  padding: 0 5px;
+}
+
+/* Float label effect when input/textarea is focused or contains text */
+.formGroup input:focus ~ span,
+.formGroup input:not(:placeholder-shown) ~ span,
+.formGroup textarea:focus ~ span,
+.formGroup textarea:not(:placeholder-shown) ~ span {
+  color: #00dfc4;
+  transform: translateX(10px) translateY(-40px);
+  /* top: -10px; Commented out for custom effects */
+  /* transform: translateY(-100%); Commented out for custom effects */
+  font-size: 1.15em;
+  padding: 0 15px;
+  background-color: var(--background-color);
+  border-left: 1px solid #00dfc4;
+  border-right: 1px solid #00dfc4;
+  letter-spacing: 0.2em;
+}
+
+/* Specific style for span inside textarea */
+.formGroup textarea + span {
+  top: 10%;
+}
