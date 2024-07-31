@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-
 }
 
 form {
@@ -15,8 +14,9 @@ textarea,
 input:not([type='submit']) {
   height: 50px;
   padding: 10px;
-  width: 150px;
-  position: relative;
+  width: 150px; /* Default width */
+  max-width: 100%; /* Ensure elements don't exceed container width */
+  box-sizing: border-box;
 }
 
 textarea {
@@ -29,8 +29,6 @@ input,
 textarea {
   border-radius: 20px;
   border: #888 1px solid;
-  box-sizing: border-box;
-  justify-self: center;
   background-color: var(--background-color);
   color: var(--form-text-color);
 }
@@ -62,7 +60,7 @@ input[type='submit']:active {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
 }
 
-@media (width >= 800px) {
+@media (min-width: 800px) {
   textarea,
   input:not([type='submit']) {
     width: 250px;
@@ -73,10 +71,11 @@ input[type='submit']:active {
   }
 }
 
-@media (width >= 1400px) {
+@media (min-width: 1400px) {
   textarea,
   input:not([type='submit']) {
-    width: 250px;
+    width: 300px; /* Adjust as needed */
+    max-width: 100%; /* Ensure elements don't exceed container width */
   }
 }
 
@@ -87,7 +86,6 @@ input[type='submit']:active {
 
 .formGroup input,
 .formGroup textarea {
-  position: relative;
   width: 100%;
   padding: 10px;
   padding-left: 16px; 
@@ -115,8 +113,6 @@ input[type='submit']:active {
 .formGroup textarea:not(:placeholder-shown) ~ span {
   color: #00dfc4;
   transform: translateX(10px) translateY(-40px);
-  /* top: -10px; Commented out for custom effects */
-  /* transform: translateY(-100%); Commented out for custom effects */
   font-size: 1.15em;
   padding: 0 15px;
   background-color: var(--background-color);
