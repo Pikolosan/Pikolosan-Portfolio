@@ -17,8 +17,8 @@ textarea,
 input:not([type='submit']) {
   height: 50px;
   padding: 10px;
-  width: calc(80% - 20px); /* Full width minus padding or margin */
-  max-width: calc(80% - 20px); /* Limit width for larger screens */
+  width: calc(100% - 20px); /* Full width minus padding or margin */
+  max-width: calc(100% - 20px); /* Limit width for larger screens */
   box-sizing: border-box;
 }
 

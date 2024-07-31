@@ -34,6 +34,12 @@ function Projects() {
           h3="CSS Animation"
           p="Cursor Tracer Animation"
         />
+        <ProjectCard
+          src={CSS}
+          link="https://github.com/Pikolosan/Web-Dev-Proj---Cursor-Tracer-Animation"
+          h3="CSS Animation"
+          p="Cursor Tracer Animation"
+        />
       </div>
     </section>
   );
