@@ -14,7 +14,7 @@ function Projects() {
           src={apple}
           link="https://github.com/Pikolosan/IPhone-15-Web-Clone-SourceCode?tab=readme-ov-file"
           h3="IPhone Store"
-          p="Discover the New iPhone 15 Pro"
+          p="New iPhone 15 Pro"
         />  
         <ProjectCard
           src={trainers}
