@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  width: 100%; /* Ensure container takes full width */
+  max-width: 1200px; /* Optional: limit max width for large screens */
+  margin: 0 auto; /* Center container horizontally */
 }
 
 form {
@@ -14,8 +17,8 @@ textarea,
 input:not([type='submit']) {
   height: 50px;
   padding: 10px;
-  width: 150px; /* Default width */
-  max-width: 100%; /* Ensure elements don't exceed container width */
+  width: calc(100% - 20px); /* Full width minus padding or margin */
+  max-width: calc(100% - 20px); /* Limit width for larger screens */
   box-sizing: border-box;
 }
 
@@ -63,19 +66,14 @@ input[type='submit']:active {
 @media (min-width: 800px) {
   textarea,
   input:not([type='submit']) {
-    width: 250px;
-    font-size: 20px;
-  }
-  form {
-    gap: 40px;
+    width: calc(80% - 20px); /* 80% of the container width minus padding or margin */
   }
 }
 
 @media (min-width: 1400px) {
   textarea,
   input:not([type='submit']) {
-    width: 300px; /* Adjust as needed */
-    max-width: 100%; /* Ensure elements don't exceed container width */
+    width: calc(60% - 20px); /* 60% of the container width minus padding or margin */
   }
 }
 
