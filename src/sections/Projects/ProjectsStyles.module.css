@@ -20,7 +20,7 @@ a {
 a:hover {
   transform: scale(1.05);
 }
-}
+
 
 .projectsContainer {
   display: flex;
