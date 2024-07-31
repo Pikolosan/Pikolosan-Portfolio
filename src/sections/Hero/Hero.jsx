@@ -15,7 +15,7 @@ function Hero() {
     const {theme , toggleTheme } = useTheme();
 
     const themeIcon = theme === 'light' ? sun : moon;
-    const twitterIcon = theme === 'light' ? instaLight : instaDark;
+    const InstaIcon = theme === 'light' ? instaLight : instaDark;
     const githubIcon = theme === 'light' ? githubLight : githubDark;
     const linkedinIcon = theme === 'light' ? linkedinLight : linkedinDark;
 
@@ -30,7 +30,7 @@ function Hero() {
                 <h2> Web Developer</h2>
                 <span>
                     <a href="https://www.instagram.com/___its.me.parth.___/" target="_blank">
-                    <img src={twitterIcon} alt="Twitter icon" />
+                        <img src={InstaIcon} alt="Insta icon" />    
                     </a>
                     <a href="https://github.com/Pikolosan" target="_blank">
                         <img src={githubIcon} alt="Github icon" />
