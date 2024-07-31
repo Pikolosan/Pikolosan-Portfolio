@@ -30,13 +30,13 @@ function Hero() {
                 <h2> Web Developer</h2>
                 <span>
                     <a href="https://www.instagram.com/___its.me.parth.___/" target="_blank">
-                        <img src={InstaIcon} alt="Insta icon" />    
+                        <img class="icons" src={InstaIcon} alt="Insta icon" />    
                     </a>
                     <a href="https://github.com/Pikolosan" target="_blank">
-                        <img src={githubIcon} alt="Github icon" />
+                        <img class="icons" src={githubIcon} alt="Github icon" />
                     </a>
                     <a href="https://www.linkedin.com/in/parth-chaudhary-aa82ab262/" target="_blank">
-                        <img src={linkedinIcon} alt="Linkedin icon" />
+                        <img class="icons" src={linkedinIcon} alt="Linkedin icon" />
                     </a>
                 </span>
                 <p className={styles.description}>

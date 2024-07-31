@@ -1,13 +1,15 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
+
 img {
   max-width: 100px;
   align-self: center;
-  background-color: var(--project-card-bg);
   border-radius: 20px;
+  background-color: var(--project-card-bg);
+  /* No background color in dark mode */
 }
 
 a {
@@ -21,7 +23,6 @@ a:hover {
   transform: scale(1.05);
 }
 
-
 .projectsContainer {
   display: flex;
   flex-direction: column;
@@ -29,6 +30,7 @@ a:hover {
   gap: 30px;
 }
 
+/* Media Queries */
 @media (width >= 800px) {
   .projectsContainer {
     flex-direction: row;
@@ -36,4 +38,9 @@ a:hover {
     justify-content: space-evenly;
     padding: 0 30px;
   }
+}
+
+/* Dark Mode Styles */
+[data-theme='dark'] img {
+  background-color: transparent; /* Remove background color for dark mode */
 }

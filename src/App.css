@@ -25,34 +25,29 @@ body {
   margin: 0 auto 60px;
 }
 
+/* Container Styles */
 #root {
   display: flex;
   flex-direction: column;
   gap: 60px;
 }
 
-h1,
-h2,
-h3,
-p {
+/* Typography Styles */
+h1, h2, h3, p {
   color: var(--text-color);
   margin: 0;
   padding: 0;
 }
 
-h2,
-h3,
-p {
+h2, h3, p {
   font-family: 'Roboto Mono', monospace;
 }
 
-h1,
-h2 {
+h1, h2 {
   text-transform: uppercase;
 }
 
-h2,
-h3 {
+h2, h3 {
   font-size: 20px;
 }
 
@@ -66,14 +61,76 @@ p {
   font-weight: 300;
 }
 
-.sectionTitle {
-  margin-bottom: 30px;
+/* Button Styles */
+button {
+  background-color: var(--btn-color);
+  color: var(--btn-text-color);
+  border: none;
+  border-radius: 20px;
+  width: 126px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
 }
 
-.hover {
-  cursor: pointer;
+button:hover {
+  transform: scale(1.05);
 }
 
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* Image and SVG Styles */
+img {
+  background: transparent; /* Ensure no background color affects images */
+  border: none; /* Remove any border */
+}
+
+/* Hero Component Styles */
+.hero {
+  max-width: 200px;
+  background: transparent; /* Ensure no background color */
+}
+
+.colorMode {
+  position: absolute;
+  right: 0;
+  width: 25px;
+  background: transparent; /* Ensure no background color */
+}
+
+span img {
+  width: 30px;
+  background: transparent; /* Ensure no background color */
+  filter: none;            /* Remove any unintended filters */
+}
+
+/* Container Styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  height: 100dvh;
+  min-height: 500px;
+}
+
+.colorModeContainer {
+  position: relative;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Responsive Styles */
 @media (width >= 800px) {
   #root {
     gap: 100px;
@@ -81,28 +138,25 @@ p {
   h1 {
     font-size: 40px;
   }
-  h2,
-  h3 {
+  h2, h3 {
     font-size: 24px;
   }
   p {
     font-size: 20px;
   }
-
   .sectionTitle {
     margin-bottom: 60px;
   }
+}
 
-  @media (width >= 1400px) {
-    #root {
-      gap: 200px;
-    }
-    h1 {
-      font-size: 48px;
-    }
-
-    .sectionTitle {
-      margin-bottom: 75px;
-    }
+@media (width >= 1400px) {
+  #root {
+    gap: 200px;
+  }
+  h1 {
+    font-size: 48px;
+  }
+  .sectionTitle {
+    margin-bottom: 75px;
   }
 }

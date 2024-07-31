@@ -1,17 +1,22 @@
 import styles from './ProjectsStyles.module.css';
 import apple from '../../assets/Apple.png';
+import applelight from '../../assets/Apple-white.png';
 import trainers from '../../assets/trainers.png';
 import CSS from '../../assets/css-coding.png';
 import insta from '../../assets/instagram.png';
 import ProjectCard from '../../common/ProjectCard';
+import { useTheme } from './../../common/ThemeContext';
 
 function Projects() {
+  const { theme } = useTheme();
+  const appleSrc = theme === 'light' ? apple : applelight;
+
   return (
     <section id="projects" className={styles.container}>
       <h1 className="sectionTitle">Projects</h1>
       <div className={styles.projectsContainer}>
         <ProjectCard
-          src={apple}
+          src={appleSrc}
           link="https://github.com/Pikolosan/IPhone-15-Web-Clone-SourceCode?tab=readme-ov-file"
           h3="IPhone Store"
           p="New iPhone 15 Pro"

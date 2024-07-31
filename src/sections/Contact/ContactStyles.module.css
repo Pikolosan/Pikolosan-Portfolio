@@ -2,9 +2,6 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 100%; /* Ensure container takes full width */
-  max-width: 1200px; /* Optional: limit max width for large screens */
-  margin: 0 auto; /* Center container horizontally */
 }
 
 form {
@@ -32,12 +29,14 @@ input,
 textarea {
   border-radius: 20px;
   border: #888 1px solid;
+  box-sizing: border-box;
+  justify-self: center;
   background-color: var(--background-color);
   color: var(--form-text-color);
 }
 
 ::placeholder {
-  color: transparent; /* Hide placeholder text */
+  color: var(--form-text-color);
 }
 
 input[type='submit'] {
@@ -63,19 +62,24 @@ input[type='submit']:active {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
 }
 
-@media (min-width: 800px) {
+@media (width >= 800px) {
   textarea,
   input:not([type='submit']) {
-    width: calc(80% - 20px); /* 80% of the container width minus padding or margin */
+    width: 600px;
+    font-size: 20px;
+  }
+  form {
+    gap: 40px;
   }
 }
 
-@media (min-width: 1400px) {
+@media (width >= 1400px) {
   textarea,
   input:not([type='submit']) {
-    width: calc(60% - 20px); /* 60% of the container width minus padding or margin */
+    width: 800px;
   }
 }
+
 
 .formGroup {
   position: relative;
