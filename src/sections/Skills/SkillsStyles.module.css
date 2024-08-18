@@ -22,6 +22,9 @@
     row-gap: 40px;
     max-width: 26ch;
   }
+  .last{
+    margin-bottom: 100px;
+  }
   
   hr {
     width: 100px;
