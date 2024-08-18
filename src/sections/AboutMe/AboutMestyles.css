@@ -1,0 +1,119 @@
+/* Reset default margin and padding, and set box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for the body element */
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container for the About section */
+.about_container {
+    width: 100%;
+    padding: 50px 8%;
+}
+
+/* Grid layout for about_contents */
+.about_container .about_contents {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-gap: 70px;
+}
+
+/* Styles for the image section */
+.imageSection {
+    position: relative;
+    top: 30px;
+    min-width: 400px;
+    height: 380px;
+}
+
+.imageSection img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+}
+
+/* Border outline for the image section */
+.imageSection::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    outline: 3px solid #0987f2;
+    top: 15px;
+    left: 15px;
+    z-index: 1;
+}
+
+/* Styles for the info section */
+.infoSection h1 {
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.infoSection h1::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 110%;
+    left: 0;
+    background-color: #aaabb0;
+}
+
+.infoSection h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #787cb5;
+    padding: 10px 0px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+.infoSection h3 {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 5px 0px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.infoSection p {
+    font-size: 15px;
+    line-height: 1.2;
+    text-align: justify;
+    padding-bottom: 10px;
+}
+
+/* Grid layout for personal information section */
+.personalInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 20px;
+    margin-top: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #555;
+}
+
+.personalInfo div {
+    display: flex ;
+    /* grid-template-columns: 1fr 1fr; */
+}
+
+.personalInfo div span {
+    color: var(--text-color);
+    letter-spacing: 1px;
+    position: relative;
+    margin-right: 10px;
+}

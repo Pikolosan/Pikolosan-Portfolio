@@ -14,8 +14,8 @@ textarea,
 input:not([type='submit']) {
   height: 50px;
   padding: 10px;
-  width: calc(100% - 20px); /* Full width minus padding or margin */
-  max-width: calc(100% - 20px); /* Limit width for larger screens */
+  width: calc(100% - 55x); /* Full width minus padding or margin */
+  max-width: calc(100% - 55px); /* Limit width for larger screens */
   box-sizing: border-box;
 }
 
@@ -96,7 +96,7 @@ input[type='submit']:active {
 /* Style for span inside input and textarea */
 .formGroup span {
   position: absolute;
-  left: 16px;
+  left: 35px;
   top: 50%; 
   transform: translateY(-50%); 
   pointer-events: none;

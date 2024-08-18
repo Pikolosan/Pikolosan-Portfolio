@@ -5,13 +5,15 @@ import Skills from './sections/Skills/Skills';
 import Contact from './sections/Contact/Contact';
 import Footer from './sections/Footer/Footer';
 import ProjectSection from './sections/Projects/ProjectSection';
+import AboutMe from './sections/AboutMe/AboutMe';
 
 function App() {
   return (
     <>
       <Hero />
-      <ProjectSection/>
+      <AboutMe/>
       <Skills />
+      <ProjectSection/>
       <Contact />
       <Footer />
     </>
