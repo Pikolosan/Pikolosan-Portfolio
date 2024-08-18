@@ -60,14 +60,16 @@ button:active {
 }
 
 .colorMode {
-  position: absolute;
+  position: relative;
   right: 0;
   width: 25px;
-  background: transparent; /* Ensure no background color */
+  background: transparent; 
 }
 
 .description {
-  max-width: 24ch;
+  max-width: 24ch; 
+  margin: 0 auto;
+  padding: 0 20px; 
 }
 
 .info {
