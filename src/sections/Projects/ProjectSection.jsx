@@ -144,20 +144,6 @@ const ProjectSection = () => {
             </a>
           </div>
         </div>
-        <div className="project-box css">
-          <div className="project-img">
-            <img src={cssCoding} alt="CSS Coding" />
-          </div>
-          <div className="project-info">
-            <h3>CSS Project</h3>
-            <span>A detailed description of the CSS Project.</span>
-          </div>
-          <div className="project-buttons">
-            <a href="#/" className="btn">
-              Code
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );
