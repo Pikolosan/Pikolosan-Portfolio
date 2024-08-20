@@ -1,8 +1,45 @@
-.container {
-    text-align: center;
-    p {
-      font-size: 16px;
-      color: var(--footer-text-color);
-    }
-  }
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
+.footer {
   
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3b82f6;
+  padding: 2.5rem;
+  text-align: center;
+  margin-top: auto; 
+}
+
+.social-icons a{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.icon {
+  fill: currentColor;
+  color: #ffffff;
+}
+
+.company-name {
+  margin-top: 1.5rem; 
+  font-weight:bolder;
+}
+
+.copyright {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
